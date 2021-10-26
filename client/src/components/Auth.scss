@@ -1,0 +1,22 @@
+
+.auth-enter {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+}
+  
+.auth-enter-active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all 300ms;
+}
+  
+.auth-exit {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+  
+.auth-exit-active {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    transition: all 300ms;
+}

@@ -1,0 +1,82 @@
+@import './sass/vars';
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-between;
+    .main-icon {
+        height: 100%;
+        margin-left: 30px;
+        a {
+            height: 100%;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            img {
+                height: 70%;
+            }
+        }
+    }
+}
+
+.right-side-list {
+    height: 100%;
+    width: 70%;
+    margin-right: 30px;
+    ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        // border: 1px solid green;
+        display: flex;
+        justify-content: flex-end;
+        li {
+            display: inline-block;
+            list-style-type: none;
+            height: 100%;
+            width: 20%;
+            // width: calc(100%/2);
+            // border: 1px solid red;
+            border-left: 1px solid $bg-color-dark;
+            transition: 400ms;
+            cursor: pointer;
+            &:hover {
+                background-color: $bg-color-dark
+            }
+            &:last-child {
+                border-right: 1px solid $bg-color-dark;
+            }
+            .top-right {
+                height: 100%;
+                width: 100%;
+                // outline: 1px solid green;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h3 {
+                    margin: 0;
+                    text-transform: capitalize;
+                    color: $menu-text-color;
+                    font-family: 'Roboto', sans-serif;
+                }
+                a {
+                    text-decoration: none;
+                    color: $menu-text-color;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.nav-small-dev {
+    height: 0 !important;
+    overflow: hidden;
+}
+

@@ -1,0 +1,80 @@
+@import '../../sass/vars';
+
+@media screen and (max-width: 1150px) {
+    .quote-wrap {
+        width: calc(100%/3);
+    }    
+}
+  
+@media screen and (max-width: 950px) {
+    .right-side-list {
+        li {
+            width: 30% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .right-side-list {
+        li {
+            width: 30% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .right-side-list {
+        li {
+            width: 40% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .quote-wrap {
+        width: calc(100%/2);
+    }  
+}
+
+@media screen and (max-width: 530px) {
+    .quotes {
+        margin-top: 20px !important;
+        width: 90%;
+        margin: 0 auto;
+        .quote-wrap {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .modal {
+        width: 350px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .right-side-list {
+        margin: 0 !important;
+        li {
+            width: 50% !important;
+        }
+    }
+    .modal {
+        width: 300px !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .modal {
+        width: 270px !important;
+    }
+}
+
+// height
+
+@media screen and (max-height: 530px) {
+    .modal {
+        height: 450px;
+    }
+}

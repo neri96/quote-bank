@@ -1,0 +1,59 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import isEqual from 'lodash.isequal';
+
+import Quote from './Quote';
+import Loader from './loader/Loader';
+
+import './Quotes.scss';
+
+import { fetchQuotes } from '../redux/actions';
+
+
+class Quotes extends Component {
+    componentDidMount() {
+        this.props.fetchQuotes();
+    };
+
+    componentDidUpdate(prevProps) {
+        const { fetchQuotes, responseQuotes } = this.props;
+        console.log('here?');
+
+        // if(!isEqual(responseQuotes, prevProps.responseQuotes)) {
+        //     fetchQuotes();
+        // }
+    
+        if(JSON.stringify(responseQuotes) !== JSON.stringify(prevProps.responseQuotes)) {
+            fetchQuotes();
+        }
+    };
+
+
+    render() {
+        return (
+            <div className='quotes'>
+                {
+                    this.props.responseQuotes.map(quote => {
+                        return (
+                            <Quote key={quote._id} quote={quote} />
+                        )
+                    })
+                }
+            </div>          
+        )
+    }    
+};
+
+const mapStateToProps = (state) => {
+    return {
+        responseQuotes: state.responseQuotes
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    { fetchQuotes }
+)(Quotes);
+
+

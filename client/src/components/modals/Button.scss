@@ -1,0 +1,21 @@
+@import '../sass/vars';
+
+.btn {
+    height: 40px;
+    width: 70px;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #5F1218;
+}
+
+.btn.submit {
+    background-color: #004d00;
+}
+
+.btn.confirm {
+    margin: 0;
+    background-color: #004d00;
+}

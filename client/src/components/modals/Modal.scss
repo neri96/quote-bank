@@ -1,0 +1,215 @@
+@import '../sass/vars';
+
+.modal {
+    height: 500px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bg-color;
+    z-index: 102;
+}
+
+.modal.delete {
+    height: 200px;
+    width: 500px;
+    .modal-header {
+        height: 50%;
+        h3 {
+            color: #ccc;
+        }
+    }
+    .modal-body {
+        display: none;
+    }
+    .modal-footer {
+        height: 50%;
+    }
+}
+
+.modal-header {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // border: 1px solid red;
+
+    img {
+        padding-top: 20px;
+        height: 90%;
+        pointer-events: none;
+    }
+    h3 {
+        color: #5F1218;
+    }
+}
+
+.modal-body {
+    // border: 1px solid red;
+    height: 55%;
+    width: 100%;
+    form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .name-input {
+            margin-top: 0;
+        }
+    }
+}
+
+// Quotes
+
+.modal.quote-ops {
+    .modal-header {
+        height: 20%;
+        img {
+            padding: 0;
+        }
+    }
+    .modal-body {
+        height: 65%;
+    }
+    .modal-footer {
+        height: 15%;
+    }
+}
+
+.quote-modal {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .error-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5F1218;
+    }
+    .quote-text-modal {
+        height: 50%;
+        width: 100%;
+        textarea {
+            height: 100%;
+            width: 100%;
+            background-color: $input-bg;
+            color: $menu-text-color;
+            font-family: 'Roboto', sans-serif;
+            resize: none;
+            font-size: 17px;
+            outline: none;
+        }
+    }
+    .color-picker {
+        // margin-top: 10px;
+        height: 25%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        // border: 1px solid red;
+        // border-bottom: 1px dotted #ccc;
+        span {
+            // border: 1px solid pink;
+            // height: 30%;
+            color: #ccc;
+            display: block;
+            // margin-bottom: 10px;
+        }
+    }
+    .font-picker {
+        margin-top: -7px;
+        height: 25%;
+        width: 100%;
+        // border: 1px solid blue;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        span {
+            // border: 1px solid pink;
+            // height: 30%;
+            color: #ccc;
+            display: block;
+            // margin-bottom: 10px;
+        }
+    }
+}
+
+.auth-modal {
+    height: calc(100% / 4);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    &:first-child {
+        margin-top: 20px;
+    }
+
+    input {
+        height: 70%;
+        width: 100%;
+        padding-left: 37px;
+        box-sizing: border-box;
+        background-color: $input-bg;
+        border: none;
+        outline-color: #ccc;
+        &::placeholder {
+            color: #fff !important;
+        }
+        &:-webkit-autofill {
+            transition: background-color 5000s ease-in-out 0s;
+            -webkit-text-fill-color: $input-bg;
+        }
+    }
+    
+    span {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: red;
+    }
+    img {
+        position: absolute;
+        top: 19%;
+        left: 10px;
+        height: 20px;
+        pointer-events: none;
+    }
+}
+
+.modal-footer {
+    height: 15%;
+    width: 100%;
+    border-top: 1px dotted $menu-text-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    outline: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // -ms-appearance: none;
+    // appearance: none;
+    position: relative;
+    background: $input-bg;
+    height: 35px;
+    width: 50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    // border-radius: 10px;
+    color: $menu-text-color;
+}
